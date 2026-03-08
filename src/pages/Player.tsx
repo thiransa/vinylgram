@@ -196,7 +196,7 @@ const Player = () => {
       {/* Audio controls */}
       <div className="flex gap-4 mt-6">
         <label
-          className="px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer transition-all duration-200"
+          className="px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer transition-colors"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Upload Song
@@ -212,7 +212,7 @@ const Player = () => {
           className={`px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 transition-all duration-200 ${
             isRecording
               ? "border-red-600 bg-red-600 text-white"
-              : "border-card bg-card text-card-foreground hover:bg-transparent hover:text-card"
+              : "border-card bg-transparent text-card hover:bg-card hover:text-card-foreground"
           }`}
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
@@ -231,7 +231,7 @@ const Player = () => {
       <div className="flex gap-4 mt-4">
         <button
           onClick={() => navigate("/dashboard")}
-          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
+          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Back
@@ -244,7 +244,7 @@ const Player = () => {
             }
             setShareOpen(true);
           }}
-          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
+          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Share This Vinyl
