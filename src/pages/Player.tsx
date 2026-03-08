@@ -157,7 +157,7 @@ const Player = () => {
         <img
           src={vinylPlayer}
           alt="Vinyl player"
-          className="w-[500px] h-auto"
+          className="w-[700px] h-auto"
         />
         {cdImage && (
           <img
