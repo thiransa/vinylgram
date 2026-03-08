@@ -250,7 +250,7 @@ const Player = () => {
         </button>
       </div>
 
-      <ShareModal open={shareOpen} onClose={() => setShareOpen(false)} />
+      <ShareModal open={shareOpen} onClose={() => setShareOpen(false)} audioUrl={audioUrl} selectedCd={selectedCd} />
     </div>
   );
 };
