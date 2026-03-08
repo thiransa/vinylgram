@@ -168,20 +168,26 @@ const Player = () => {
             }}
           />
         )}
-        <img
-          src={tonearm}
-          alt="Tone arm"
-          className="absolute w-[180px] h-auto cursor-grab active:cursor-grabbing select-none touch-none"
+        {/* Tonearm pivot point - head stays fixed, arm rotates */}
+        <div
+          ref={tonearmRef}
+          className="absolute"
           style={{
             top: '-2%',
             right: '2%',
-            transform: `rotate(${armAngle}deg)`,
+            width: '180px',
             transformOrigin: 'top center',
+            transform: `rotate(${armAngle}deg)`,
           }}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-        />
+        >
+          <img
+            src={tonearm}
+            alt="Tone arm"
+            className="w-full h-auto cursor-grab active:cursor-grabbing select-none touch-none"
+            draggable={false}
+            onPointerDown={handlePointerDown}
+          />
+        </div>
       </div>
 
       {/* Audio controls */}
