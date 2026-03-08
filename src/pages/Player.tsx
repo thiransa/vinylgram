@@ -50,7 +50,7 @@ const Player = () => {
         <img
           src={tonearm}
           alt="Tone arm"
-          className="absolute w-[110px] h-auto"
+          className="absolute w-[150px] h-auto"
           style={{
             top: '8%',
             right: '18%',
