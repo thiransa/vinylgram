@@ -227,13 +227,30 @@ const Player = () => {
 
       <audio ref={audioRef} src={audioUrl || undefined} />
 
-      <button
-        onClick={() => navigate("/dashboard")}
-        className="mt-4 px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
-        style={{ fontFamily: "'Nunito', sans-serif" }}
-      >
-        Back
-      </button>
+      <div className="flex gap-4 mt-4">
+        <button
+          onClick={() => navigate("/dashboard")}
+          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
+          style={{ fontFamily: "'Nunito', sans-serif" }}
+        >
+          Back
+        </button>
+        <button
+          onClick={() => {
+            if (!audioUrl) {
+              toast("Add a song or voice message first!", { style: { fontFamily: "'Nunito', sans-serif", background: "hsl(35 45% 80%)", color: "hsl(24 40% 18%)", border: "2px solid hsl(24 40% 18%)" } });
+              return;
+            }
+            setShareOpen(true);
+          }}
+          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
+          style={{ fontFamily: "'Nunito', sans-serif" }}
+        >
+          Share This Vinyl
+        </button>
+      </div>
+
+      <ShareModal open={shareOpen} onClose={() => setShareOpen(false)} />
     </div>
   );
 };
