@@ -38,10 +38,10 @@ const Player = () => {
           <img
             src={cdImage}
             alt="Selected vinyl"
-            className="absolute w-[280px] h-[280px] object-contain rounded-full"
+            className="absolute w-[330px] h-[330px] object-contain rounded-full"
             style={{
-              top: '47%',
-              left: '37%',
+              top: '44%',
+              left: '43%',
               transform: 'translate(-50%, -50%)',
             }}
           />
