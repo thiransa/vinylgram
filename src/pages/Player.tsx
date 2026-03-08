@@ -159,13 +159,12 @@ const Player = () => {
         <img
           src={tonearm}
           alt="Tone arm"
-          className="absolute w-[180px] h-auto cursor-grab active:cursor-grabbing"
+          className="absolute w-[180px] h-auto cursor-grab active:cursor-grabbing select-none touch-none"
           style={{
             top: '-2%',
             right: '2%',
             transform: `rotate(${armAngle}deg)`,
             transformOrigin: 'top center',
-            transition: isDraggingRef.current ? 'none' : 'transform 0.3s ease',
           }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
