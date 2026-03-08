@@ -231,7 +231,7 @@ const Player = () => {
       <div className="flex gap-4 mt-4">
         <button
           onClick={() => navigate("/dashboard")}
-          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
+          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Back
