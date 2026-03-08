@@ -6,6 +6,7 @@ import cd3 from "@/assets/cd3.png";
 import cd4 from "@/assets/cd4.png";
 import cd5 from "@/assets/cd5.png";
 import cd6 from "@/assets/cd6.png";
+import cd7 from "@/assets/cd7.png";
 
 const Dashboard = () => {
   return (
@@ -19,8 +20,9 @@ const Dashboard = () => {
         <img src={cd4} alt="Vinyl record 4" className="w-48 h-48 object-contain" />
         <img src={cd5} alt="Vinyl record 5" className="w-48 h-48 object-contain" />
       </div>
-      <div className="flex mt-8" style={{ marginLeft: 'calc(128px + 48px + 64px)' }}>
+      <div className="flex gap-16 mt-8 self-start" style={{ marginLeft: 'calc(7rem + 12rem + 4rem + 6rem)' }}>
         <img src={cd6} alt="Vinyl record 6" className="w-48 h-48 object-contain" />
+        <img src={cd7} alt="Vinyl record 7" className="w-48 h-48 object-contain" />
       </div>
     </div>
   );
