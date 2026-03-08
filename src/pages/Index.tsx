@@ -1,4 +1,4 @@
-import rockingChairImg from '@/assets/rocking-chair-nobg.png';
+import rockingChairImg from '@/assets/rocking-chair-clean.png';
 
 const DustParticle = ({ delay, left, size }: { delay: string; left: string; size: number }) => (
   <div
