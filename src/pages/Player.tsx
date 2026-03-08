@@ -176,7 +176,7 @@ const Player = () => {
           ref={tonearmRef}
           className="absolute"
           style={{
-            top: 'calc(9% + 30px)',
+            top: 'calc(9% + 70px)',
             right: '21%',
             width: '150px',
             transformOrigin: 'top center',
