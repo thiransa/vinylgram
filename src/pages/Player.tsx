@@ -41,7 +41,7 @@ const Player = () => {
             className="absolute w-[330px] h-[330px] object-contain rounded-full"
             style={{
               top: '47%',
-              left: '40%',
+              left: '38%',
               transform: 'translate(-50%, -50%)',
             }}
           />
