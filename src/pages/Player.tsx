@@ -163,10 +163,10 @@ const Player = () => {
           <img
             src={cdImage}
             alt="Selected vinyl"
-            className="absolute w-[330px] h-[330px] object-contain rounded-full"
+            className="absolute w-[280px] h-[280px] object-contain rounded-full"
             style={{
-              top: 'calc(47% + 2px)',
-              left: 'calc(36% + 2px)',
+              top: '46%',
+              left: '38%',
               transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
             }}
           />
