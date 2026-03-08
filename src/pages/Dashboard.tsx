@@ -1,6 +1,7 @@
 // @ts-ignore
 import "@fontsource-variable/bitcount-prop-double";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import cd1 from "@/assets/cd1.png";
 import cd2 from "@/assets/cd2.png";
 import cd3 from "@/assets/cd3.png";
@@ -14,6 +15,7 @@ const cdsRow2 = [cd6, cd7];
 
 const Dashboard = () => {
   const [selectedCd, setSelectedCd] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const handleSelect = (index: number) => {
     setSelectedCd(selectedCd === index ? null : index);
@@ -60,6 +62,7 @@ const Dashboard = () => {
             : "border-card/30 bg-card/30 text-card-foreground/50 cursor-not-allowed"
         }`}
         style={{ fontFamily: "'Nunito', sans-serif" }}
+        onClick={() => selectedCd !== null && navigate("/player", { state: { selectedCd } })}
       >
         Next
       </button>
