@@ -2,6 +2,7 @@
 import "@fontsource-variable/bitcount-prop-double";
 import { useLocation, useNavigate } from "react-router-dom";
 import vinylPlayer from "@/assets/vinyl-player.png";
+import tonearm from "@/assets/tonearm.png";
 import cd1 from "@/assets/cd1.png";
 import cd2 from "@/assets/cd2.png";
 import cd3 from "@/assets/cd3.png";
@@ -46,6 +47,17 @@ const Player = () => {
             }}
           />
         )}
+        <img
+          src={tonearm}
+          alt="Tone arm"
+          className="absolute w-[80px] h-auto"
+          style={{
+            top: '8%',
+            right: '18%',
+            transform: 'rotate(25deg)',
+            transformOrigin: 'top center',
+          }}
+        />
       </div>
 
       <button
