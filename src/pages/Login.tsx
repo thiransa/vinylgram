@@ -16,11 +16,13 @@ const Login = () => {
 
     if (error) {
       if (error.code === "23505") {
-        toast.error("You're already on the list!");
+        toast("Welcome back! 👋", { style: { fontFamily: "'Nunito', sans-serif", background: "hsl(35 45% 80%)", color: "hsl(24 40% 18%)", border: "2px solid hsl(24 40% 18%)" } });
+        navigate("/dashboard");
+        return;
       } else {
         toast.error("Something went wrong. Please try again.");
+        return;
       }
-      return;
     }
 
     toast.success("You're on the waitlist!");
