@@ -50,11 +50,11 @@ const Player = () => {
         <img
           src={tonearm}
           alt="Tone arm"
-          className="absolute w-[150px] h-auto"
+          className="absolute w-[180px] h-auto"
           style={{
-            top: '8%',
-            right: '18%',
-            transform: 'rotate(25deg)',
+            top: '-12%',
+            right: '5%',
+            transform: 'rotate(30deg)',
             transformOrigin: 'top center',
           }}
         />
