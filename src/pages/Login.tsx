@@ -31,7 +31,7 @@ const Login = () => {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center">
       <img src={vinylRecord} alt="Vinyl record" className="w-24 h-24 object-contain mb-6" />
       <h2 className="text-3xl font-bold text-card mb-8" style={{ fontFamily: "'Nunito', sans-serif" }}>
-        Enter your email
+        Stay in the loop!
       </h2>
       <form onSubmit={handleSubmit} className="w-full max-w-sm px-6">
         <input
