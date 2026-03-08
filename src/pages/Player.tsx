@@ -40,7 +40,7 @@ const Player = () => {
             alt="Selected vinyl"
             className="absolute w-[280px] h-[280px] object-contain rounded-full"
             style={{
-              top: '49%',
+              top: '47%',
               left: '37%',
               transform: 'translate(-50%, -50%)',
             }}
