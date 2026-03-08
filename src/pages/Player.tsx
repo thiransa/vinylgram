@@ -176,8 +176,8 @@ const Player = () => {
           ref={tonearmRef}
           className="absolute"
           style={{
-            top: '5%',
-            right: '18%',
+            top: '9%',
+            right: '21%',
             width: '150px',
             transformOrigin: 'top center',
             transform: `rotate(${armAngle}deg)`,
