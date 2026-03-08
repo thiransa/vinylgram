@@ -36,6 +36,7 @@ const Player = () => {
   const rotationRef = useRef(0);
   const lastTimeRef = useRef<number | null>(null);
   const animFrameRef = useRef<number>(0);
+  const armAngleRef = useRef(ARM_REST_ANGLE);
 
   // Dragging state
   const isDraggingRef = useRef(false);
@@ -80,14 +81,15 @@ const Player = () => {
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
     isDraggingRef.current = true;
     dragStartYRef.current = e.clientY;
-    dragStartAngleRef.current = armAngle;
+    dragStartAngleRef.current = armAngleRef.current;
     (e.target as HTMLElement).setPointerCapture(e.pointerId);
-  }, [armAngle]);
+  }, []);
 
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     if (!isDraggingRef.current) return;
     const deltaY = e.clientY - dragStartYRef.current;
-    const newAngle = Math.max(ARM_REST_ANGLE, Math.min(ARM_PLAY_ANGLE, dragStartAngleRef.current + deltaY * 0.3));
+    const newAngle = Math.max(ARM_REST_ANGLE, Math.min(ARM_PLAY_ANGLE, dragStartAngleRef.current + deltaY * 0.15));
+    armAngleRef.current = newAngle;
     setArmAngle(newAngle);
   }, []);
 
@@ -157,13 +159,12 @@ const Player = () => {
         <img
           src={tonearm}
           alt="Tone arm"
-          className="absolute w-[180px] h-auto cursor-grab active:cursor-grabbing"
+          className="absolute w-[180px] h-auto cursor-grab active:cursor-grabbing select-none touch-none"
           style={{
             top: '-2%',
             right: '2%',
             transform: `rotate(${armAngle}deg)`,
             transformOrigin: 'top center',
-            transition: isDraggingRef.current ? 'none' : 'transform 0.3s ease',
           }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
