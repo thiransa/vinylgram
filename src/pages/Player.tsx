@@ -36,6 +36,7 @@ const Player = () => {
   const rotationRef = useRef(0);
   const lastTimeRef = useRef<number | null>(null);
   const animFrameRef = useRef<number>(0);
+  const armAngleRef = useRef(ARM_REST_ANGLE);
 
   // Dragging state
   const isDraggingRef = useRef(false);
