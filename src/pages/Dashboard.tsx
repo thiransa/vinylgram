@@ -54,10 +54,10 @@ const Dashboard = () => {
       </div>
       <button
         disabled={selectedCd === null}
-        className={`mt-12 px-12 py-3 rounded-full text-lg font-semibold transition-all duration-200 ${
+        className={`mt-12 px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-all duration-200 border-2 ${
           selectedCd !== null
-            ? "bg-primary text-primary-foreground hover:opacity-90 cursor-pointer"
-            : "bg-muted text-muted-foreground cursor-not-allowed opacity-50"
+            ? "border-card bg-card text-card-foreground hover:bg-transparent hover:text-card cursor-pointer"
+            : "border-card/30 bg-card/30 text-card-foreground/50 cursor-not-allowed"
         }`}
         style={{ fontFamily: "'Nunito', sans-serif" }}
       >
