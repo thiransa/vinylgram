@@ -1,3 +1,4 @@
+import "@fontsource-variable/bitcount-prop-double";
 import vinylRecord from "@/assets/vinyl-record.png";
 
 const Index = () => {
