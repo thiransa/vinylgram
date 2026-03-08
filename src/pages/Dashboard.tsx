@@ -4,6 +4,7 @@ import cd1 from "@/assets/cd1.png";
 import cd2 from "@/assets/cd2.png";
 import cd3 from "@/assets/cd3.png";
 import cd4 from "@/assets/cd4.png";
+import cd5 from "@/assets/cd5.png";
 
 const Dashboard = () => {
   return (
@@ -15,6 +16,7 @@ const Dashboard = () => {
         <img src={cd2} alt="Vinyl record 2" className="w-48 h-48 object-contain" />
         <img src={cd3} alt="Vinyl record 3" className="w-48 h-48 object-contain" />
         <img src={cd4} alt="Vinyl record 4" className="w-48 h-48 object-contain" />
+        <img src={cd5} alt="Vinyl record 5" className="w-48 h-48 object-contain" />
       </div>
     </div>
   );
