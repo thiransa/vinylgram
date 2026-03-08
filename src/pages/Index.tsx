@@ -9,14 +9,14 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center pt-2">
-      <img src={vinylRecord} alt="Vinyl record" className="w-36 h-36 object-contain" />
-      <h1 className="mt-4 text-8xl font-bold text-card" style={{ fontFamily: "'Bitcount Prop Double Variable', sans-serif" }}>Vinylgram</h1>
-      <p className="mt-2 text-xl text-card" style={{ fontFamily: "'Nunito', sans-serif" }}>press play on your feelings</p>
-      <button onClick={() => navigate("/login")} className="mt-6 px-8 py-3 border-2 border-card bg-transparent text-card rounded-none text-lg font-semibold uppercase tracking-wider hover:bg-card hover:text-card-foreground transition-colors" style={{ fontFamily: "'Nunito', sans-serif" }}>
+    <div className="min-h-screen bg-background flex flex-col items-center pt-2 px-4">
+      <img src={vinylRecord} alt="Vinyl record" className="w-24 sm:w-36 h-24 sm:h-36 object-contain" />
+      <h1 className="mt-4 text-5xl sm:text-6xl lg:text-8xl font-bold text-card text-center" style={{ fontFamily: "'Bitcount Prop Double Variable', sans-serif" }}>Vinylgram</h1>
+      <p className="mt-2 text-lg sm:text-xl text-card text-center" style={{ fontFamily: "'Nunito', sans-serif" }}>press play on your feelings</p>
+      <button onClick={() => navigate("/login")} className="mt-6 px-8 py-3 border-2 border-card bg-transparent text-card rounded-none text-base sm:text-lg font-semibold uppercase tracking-wider hover:bg-card hover:text-card-foreground transition-colors" style={{ fontFamily: "'Nunito', sans-serif" }}>
         Get Started
       </button>
-      <img src={cover4} alt="Album cover" className="mt-8 w-[500px] h-auto object-contain" />
+      <img src={cover4} alt="Album cover" className="mt-8 w-full max-w-[500px] h-auto object-contain" />
       <p className="mt-4 mb-6 text-sm text-card/70" style={{ fontFamily: "'Special Elite', cursive" }}>Built with love by Thiransa</p>
     </div>
   );

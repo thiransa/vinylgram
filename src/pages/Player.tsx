@@ -145,25 +145,25 @@ const Player = () => {
   }, [isPlaying]);
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center relative">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center relative px-4">
       <h1
-        className="text-4xl font-bold text-card absolute top-4"
+        className="text-[28px] md:text-[32px] lg:text-4xl font-bold text-card absolute top-4"
         style={{ fontFamily: "'Bitcount Prop Double Variable', sans-serif" }}
       >
         Vinylgram
       </h1>
 
-      <div className="relative">
+      <div className="relative w-[92vw] md:w-[380px] lg:w-[800px]">
         <img
           src={vinylPlayer}
           alt="Vinyl player"
-          className="w-[800px] h-auto"
+          className="w-full h-auto"
         />
         {cdImage && (
           <img
             src={cdImage}
             alt="Selected vinyl"
-            className="absolute w-[280px] h-[280px] object-contain rounded-full"
+            className="absolute w-[35%] h-[35%] object-contain rounded-full"
             style={{
               top: '50%',
               left: 'calc(42% + 26px)',
@@ -178,7 +178,7 @@ const Player = () => {
           style={{
             top: 'calc(9% + 70px)',
             right: 'calc(21% + 20px)',
-            width: '150px',
+            width: '18.75%',
             transformOrigin: 'top center',
             transform: `rotate(${armAngle}deg)`,
           }}
@@ -194,9 +194,9 @@ const Player = () => {
       </div>
 
       {/* Audio controls */}
-      <div className="flex gap-4 mt-6">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 w-full sm:w-auto items-center">
         <label
-          className="px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer transition-colors"
+          className="px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer transition-colors text-center w-full sm:w-auto"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Upload Song
@@ -209,7 +209,7 @@ const Player = () => {
         </label>
         <button
           onClick={toggleRecording}
-          className={`px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 transition-all duration-200 ${
+          className={`px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 transition-colors w-full sm:w-auto ${
             isRecording
               ? "border-red-600 bg-red-600 text-white"
               : "border-card bg-transparent text-card hover:bg-card hover:text-card-foreground"
@@ -221,17 +221,17 @@ const Player = () => {
       </div>
 
       {audioUrl && (
-        <p className="mt-2 text-xs text-card/60" style={{ fontFamily: "'Nunito', sans-serif" }}>
+        <p className="mt-2 text-xs text-card/60 text-center" style={{ fontFamily: "'Nunito', sans-serif" }}>
           Audio loaded — drag the tonearm onto the record to play
         </p>
       )}
 
       <audio ref={audioRef} src={audioUrl || undefined} />
 
-      <div className="flex gap-4 mt-4">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 w-full sm:w-auto items-center">
         <button
           onClick={() => navigate("/dashboard")}
-          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer"
+          className="px-8 sm:px-12 py-3 rounded-none text-base sm:text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer w-full sm:w-auto"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Back
@@ -244,7 +244,7 @@ const Player = () => {
             }
             setShareOpen(true);
           }}
-          className="px-12 py-3 rounded-none text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer"
+          className="px-8 sm:px-12 py-3 rounded-none text-base sm:text-lg font-semibold uppercase tracking-wider transition-colors border-2 border-card bg-transparent text-card hover:bg-card hover:text-card-foreground cursor-pointer w-full sm:w-auto"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
           Share This Vinyl

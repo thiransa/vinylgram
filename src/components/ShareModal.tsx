@@ -48,9 +48,9 @@ const ShareModal = ({ open, onClose }: ShareModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60" onClick={onClose}>
       <div
-        className="relative bg-accent w-[95vw] max-w-md max-h-[90vh] overflow-y-auto rounded-sm border-2 border-card p-6"
+        className="relative bg-accent w-full sm:w-[95vw] sm:max-w-md max-h-[90vh] overflow-y-auto rounded-t-lg sm:rounded-sm border-2 border-card p-6"
         onClick={(e) => e.stopPropagation()}
         style={{ fontFamily: "'Nunito', sans-serif" }}
       >
