@@ -32,17 +32,17 @@ const Player = () => {
         <img
           src={vinylPlayer}
           alt="Vinyl player"
-          className="w-[700px] h-auto"
+          className="w-[500px] h-auto"
         />
         {cdImage && (
           <img
             src={cdImage}
             alt="Selected vinyl"
-            className="absolute w-[420px] h-[420px] object-contain rounded-full"
+            className="absolute w-[310px] h-[310px] object-contain rounded-full"
             style={{
-              top: '50%',
-              left: '46%',
-              transform: 'translate(-50%, -54%)',
+              top: '44%',
+              left: '44%',
+              transform: 'translate(-50%, -50%)',
             }}
           />
         )}
