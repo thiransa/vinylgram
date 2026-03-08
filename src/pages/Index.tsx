@@ -17,6 +17,7 @@ const Index = () => {
         Get Started
       </button>
       <img src={cover4} alt="Album cover" className="mt-8 w-[500px] h-auto object-contain" />
+      <p className="mt-4 mb-6 text-sm text-card/70" style={{ fontFamily: "'Special Elite', cursive" }}>Built with love by Thiransa</p>
     </div>
   );
 };
