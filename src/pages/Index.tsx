@@ -1,6 +1,7 @@
 // @ts-ignore
 import "@fontsource-variable/bitcount-prop-double";
 import vinylRecord from "@/assets/vinyl-record.png";
+import cover4 from "@/assets/cover4-3.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +16,7 @@ const Index = () => {
       <button onClick={() => navigate("/login")} className="mt-6 px-8 py-3 border-2 border-card bg-transparent text-card rounded-none text-lg font-semibold uppercase tracking-wider hover:bg-card hover:text-card-foreground transition-colors" style={{ fontFamily: "'Nunito', sans-serif" }}>
         Get Started
       </button>
+      <img src={cover4} alt="Album cover" className="mt-8 w-[500px] h-auto object-contain" />
     </div>
   );
 };
