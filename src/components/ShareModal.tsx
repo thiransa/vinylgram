@@ -7,7 +7,7 @@ import cover3 from "@/assets/cover3.png";
 import cover4 from "@/assets/cover4.png";
 
 const covers = [cover1, cover2, cover3, cover4];
-const MOCK_URL = "vinylgram.foryou/vinyl/abc123";
+const MOCK_URL = "vinylgram.lovable.app";
 
 interface ShareModalProps {
   open: boolean;
