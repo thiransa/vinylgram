@@ -212,7 +212,7 @@ const Player = () => {
           className={`px-6 py-2 rounded-none text-sm font-semibold uppercase tracking-wider border-2 transition-all duration-200 ${
             isRecording
               ? "border-red-600 bg-red-600 text-white"
-              : "border-card bg-card text-card-foreground hover:bg-transparent hover:text-card"
+              : "border-card bg-transparent text-card hover:bg-card hover:text-card-foreground"
           }`}
           style={{ fontFamily: "'Nunito', sans-serif" }}
         >
