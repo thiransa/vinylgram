@@ -177,7 +177,7 @@ const Player = () => {
           className="absolute"
           style={{
             top: 'calc(9% + 70px)',
-            right: '21%',
+            right: 'calc(21% + 20px)',
             width: '150px',
             transformOrigin: 'top center',
             transform: `rotate(${armAngle}deg)`,
