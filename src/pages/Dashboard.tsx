@@ -1,6 +1,7 @@
 // @ts-ignore
 import "@fontsource-variable/bitcount-prop-double";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import cd1 from "@/assets/cd1.png";
 import cd2 from "@/assets/cd2.png";
 import cd3 from "@/assets/cd3.png";
