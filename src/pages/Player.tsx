@@ -166,7 +166,7 @@ const Player = () => {
             className="absolute w-[280px] h-[280px] object-contain rounded-full"
             style={{
               top: '50%',
-              left: 'calc(42% + 8px)',
+              left: 'calc(42% + 14px)',
               transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
             }}
           />
