@@ -30,6 +30,7 @@ const Player = () => {
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [armAngle, setArmAngle] = useState(ARM_REST_ANGLE);
+  const [shareOpen, setShareOpen] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
