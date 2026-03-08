@@ -38,7 +38,7 @@ const Dashboard = () => {
           />
         ))}
       </div>
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 mt-4 lg:mt-8 w-full lg:w-auto lg:self-start lg:ml-[496px]">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 mt-4 lg:mt-8 w-full">
         {cdsRow2.map((cd, i) => {
           const index = i + 5;
           return (
