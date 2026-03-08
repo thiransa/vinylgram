@@ -2,6 +2,8 @@
 import "@fontsource-variable/bitcount-prop-double";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useRef, useCallback, useEffect } from "react";
+import { toast } from "sonner";
+import ShareModal from "@/components/ShareModal";
 import vinylPlayer from "@/assets/vinyl-player.png";
 import tonearm from "@/assets/tonearm.png";
 import cd1 from "@/assets/cd1.png";
