@@ -47,6 +47,17 @@ const Player = () => {
             }}
           />
         )}
+        <img
+          src={tonearm}
+          alt="Tone arm"
+          className="absolute w-[80px] h-auto"
+          style={{
+            top: '8%',
+            right: '18%',
+            transform: 'rotate(25deg)',
+            transformOrigin: 'top center',
+          }}
+        />
       </div>
 
       <button
