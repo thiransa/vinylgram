@@ -1,4 +1,4 @@
-import rockingChairImg from '@/assets/rocking-chair-nobg.png';
+import rockingChairImg from '@/assets/rocking-chair-clean.png';
 
 const DustParticle = ({ delay, left, size }: { delay: string; left: string; size: number }) => (
   <div
@@ -19,7 +19,7 @@ const Index = () => {
       background: `
         repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(0,0,0,0.03) 120px, rgba(0,0,0,0.03) 122px),
         repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(0,0,0,0.02) 4px, rgba(0,0,0,0.02) 5px),
-        linear-gradient(180deg, hsl(24 50% 13%) 0%, hsl(24 42% 16%) 50%, hsl(16 48% 13%) 100%)
+        linear-gradient(180deg, hsl(24 35% 28%) 0%, hsl(24 30% 32%) 50%, hsl(16 30% 26%) 100%)
       `,
     }}>
       {/* Wood panel walls */}
