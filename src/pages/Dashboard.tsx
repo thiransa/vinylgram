@@ -62,6 +62,7 @@ const Dashboard = () => {
             : "border-card/30 bg-card/30 text-card-foreground/50 cursor-not-allowed"
         }`}
         style={{ fontFamily: "'Nunito', sans-serif" }}
+        onClick={() => selectedCd !== null && navigate("/player", { state: { selectedCd } })}
       >
         Next
       </button>
