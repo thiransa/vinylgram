@@ -25,7 +25,7 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background flex flex-col items-center px-4">
       <h1 className="text-[28px] md:text-[32px] lg:text-4xl font-bold text-card text-center pt-4" style={{ fontFamily: "'Bitcount Prop Double Variable', sans-serif" }}>Vinylgram</h1>
       <p className="text-base md:text-lg text-card text-center mt-2" style={{ fontFamily: "'Nunito', sans-serif" }}>Please select a vinyl record</p>
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 mt-8 lg:mt-16 w-full lg:w-auto lg:self-start lg:ml-28">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 mt-8 lg:mt-16 w-full">
         {cds.map((cd, i) => (
           <img
             key={i}
@@ -38,7 +38,7 @@ const Dashboard = () => {
           />
         ))}
       </div>
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 mt-4 lg:mt-8 w-full lg:w-auto lg:self-start lg:ml-[496px]">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-16 mt-4 lg:mt-8 w-full">
         {cdsRow2.map((cd, i) => {
           const index = i + 5;
           return (
