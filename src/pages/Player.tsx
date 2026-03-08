@@ -52,7 +52,7 @@ const Player = () => {
           alt="Tone arm"
           className="absolute w-[180px] h-auto"
           style={{
-            top: '-12%',
+            top: '-6%',
             right: '5%',
             transform: 'rotate(30deg)',
             transformOrigin: 'top center',
