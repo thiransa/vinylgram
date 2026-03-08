@@ -52,8 +52,8 @@ const Player = () => {
           alt="Tone arm"
           className="absolute w-[180px] h-auto"
           style={{
-            top: '-6%',
-            right: '5%',
+            top: '-2%',
+            right: '2%',
             transform: 'rotate(30deg)',
             transformOrigin: 'top center',
           }}
