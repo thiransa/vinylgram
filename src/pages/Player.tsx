@@ -77,32 +77,44 @@ const Player = () => {
     }
   };
 
-  // Tonearm drag
+  // Tonearm drag - use document-level listeners for reliability
+  const tonearmRef = useRef<HTMLDivElement>(null);
+
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
+    e.preventDefault();
     isDraggingRef.current = true;
     dragStartYRef.current = e.clientY;
     dragStartAngleRef.current = armAngleRef.current;
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
   }, []);
 
-  const handlePointerMove = useCallback((e: React.PointerEvent) => {
-    if (!isDraggingRef.current) return;
-    const deltaY = e.clientY - dragStartYRef.current;
-    const newAngle = Math.max(ARM_REST_ANGLE, Math.min(ARM_PLAY_ANGLE, dragStartAngleRef.current + deltaY * 0.15));
-    armAngleRef.current = newAngle;
-    setArmAngle(newAngle);
-  }, []);
-
-  const handlePointerUp = useCallback(() => {
-    isDraggingRef.current = false;
+  useEffect(() => {
+    const handleMove = (e: PointerEvent) => {
+      if (!isDraggingRef.current) return;
+      const deltaY = e.clientY - dragStartYRef.current;
+      const newAngle = Math.max(ARM_REST_ANGLE, Math.min(ARM_PLAY_ANGLE, dragStartAngleRef.current + deltaY * 0.15));
+      armAngleRef.current = newAngle;
+      setArmAngle(newAngle);
+    };
+    const handleUp = () => {
+      isDraggingRef.current = false;
+    };
+    document.addEventListener('pointermove', handleMove);
+    document.addEventListener('pointerup', handleUp);
+    return () => {
+      document.removeEventListener('pointermove', handleMove);
+      document.removeEventListener('pointerup', handleUp);
+    };
   }, []);
 
   // Play/pause based on arm threshold
   useEffect(() => {
-    if (!audioUrl || !audioRef.current) return;
-    if (armAngle >= ARM_PLAY_THRESHOLD && !isPlaying) {
-      audioRef.current.play().catch(() => {});
-      setIsPlaying(true);
+    if (!audioRef.current) return;
+    if (audioUrl && armAngle >= ARM_PLAY_THRESHOLD && !isPlaying) {
+      // Need user gesture - play may fail without one, but we already have pointer interaction
+      const playPromise = audioRef.current.play();
+      if (playPromise) {
+        playPromise.then(() => setIsPlaying(true)).catch(() => {});
+      }
     } else if (armAngle < ARM_PLAY_THRESHOLD && isPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);
@@ -156,20 +168,26 @@ const Player = () => {
             }}
           />
         )}
-        <img
-          src={tonearm}
-          alt="Tone arm"
-          className="absolute w-[180px] h-auto cursor-grab active:cursor-grabbing select-none touch-none"
+        {/* Tonearm pivot point - head stays fixed, arm rotates */}
+        <div
+          ref={tonearmRef}
+          className="absolute"
           style={{
             top: '-2%',
             right: '2%',
-            transform: `rotate(${armAngle}deg)`,
+            width: '180px',
             transformOrigin: 'top center',
+            transform: `rotate(${armAngle}deg)`,
           }}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-        />
+        >
+          <img
+            src={tonearm}
+            alt="Tone arm"
+            className="w-full h-auto cursor-grab active:cursor-grabbing select-none touch-none"
+            draggable={false}
+            onPointerDown={handlePointerDown}
+          />
+        </div>
       </div>
 
       {/* Audio controls */}
