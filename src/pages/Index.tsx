@@ -2,7 +2,11 @@
 import "@fontsource-variable/bitcount-prop-double";
 import vinylRecord from "@/assets/vinyl-record.png";
 
+import { useNavigate } from "react-router-dom";
+
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background flex flex-col items-center pt-2">
       <img src={vinylRecord} alt="Vinyl record" className="w-36 h-36 object-contain" />
