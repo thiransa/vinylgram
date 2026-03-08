@@ -15,6 +15,7 @@ const cdsRow2 = [cd6, cd7];
 
 const Dashboard = () => {
   const [selectedCd, setSelectedCd] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const handleSelect = (index: number) => {
     setSelectedCd(selectedCd === index ? null : index);
