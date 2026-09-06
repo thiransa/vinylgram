@@ -176,7 +176,7 @@ const VinylView = () => {
         <img
           src={cdImage}
           alt="Vinyl record"
-          className="absolute w-[53%] h-[53%] max-[768px]:w-[55%] max-[768px]:h-[55%] object-contain rounded-full left-[calc(42%+25px)] max-[768px]:left-[calc(42%+19px)]"
+          className="absolute w-[53%] h-[53%] object-contain rounded-full left-[calc(42%+25px)] max-[768px]:left-[45.4%]"
           style={{
             top: '50%',
             transform: `translate(-50%, -50%) rotate(${rotation}deg)`,

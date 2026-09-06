@@ -45,8 +45,15 @@ const Login = () => {
           className="w-full px-4 py-3 border-2 border-card bg-transparent text-card placeholder:text-card/50 rounded-none text-lg focus:outline-none focus:border-primary"
           style={{ fontFamily: "'Nunito', sans-serif" }}
         />
+        <button
+          type="submit"
+          className="mt-4 w-full px-8 py-3 border-2 border-card bg-card text-card-foreground rounded-none text-lg font-semibold uppercase tracking-wider hover:bg-transparent hover:text-card transition-colors"
+          style={{ fontFamily: "'Nunito', sans-serif" }}
+        >
+          Go
+        </button>
         <p className="mt-4 text-sm text-card/60 text-center" style={{ fontFamily: "'Nunito', sans-serif" }}>
-          Press Enter to continue
+          or press Enter to continue
         </p>
       </form>
     </div>
